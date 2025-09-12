@@ -1,0 +1,127 @@
+/* -------- Global resets -------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+:root {
+  /* Force light UI controls so number spinners don’t show dark background */
+  color-scheme: light;
+}
+
+/* Remove Vite demo defaults that centered the app and forced dark mode */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.5;
+  background: #f6f7fb;
+  color: #0f172a;
+}
+
+/* Basic link look (optional) */
+a { color: #0ea5e9; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Buttons (your components have inline styles; this keeps browser defaults sane) */
+button { font: inherit; }
+
+/* -------- Number input spinner tweaks -------- */
+
+/* 1) Use light scheme for number inputs so spinners get light background & dark arrows */
+input[type="number"] {
+  color-scheme: light;
+}
+
+/* 2) If the browser still renders inverted colors, this resets WebKit spinners */
+#days::-webkit-inner-spin-button,
+#days::-webkit-outer-spin-button {
+  -webkit-appearance: inner-spin-button; /* keep the spinner visible */
+  filter: none !important;               /* no forced inversion */
+  margin: 0;
+  background: transparent;               /* avoid dark box */
+}
+
+.primary-btn:hover {
+  background: #2f64d6;   /* darker blue on hover */
+  transform: translateY(-1px);
+}
+
+.primary-btn:active {
+  transform: translateY(0);
+}
+
+
+/* Firefox already matches text color; nothing special needed. Keeping for completeness: */
+#days[type="number"] {
+  -moz-appearance: textfield; /* comment this out if you want FF spinners visible */
+}
+
+/* -------- Responsive helper (optional) -------- */
+/* If you add className="main-grid" on your <section>, this stacks on phones */
+@media (max-width: 900px) {
+  .main-grid { grid-template-columns: 1fr !important; }
+}
+
+/* If you didn’t add the class, you can fallback to the tag selector:
+@media (max-width: 900px) {
+  section { grid-template-columns: 1fr !important; }
+}
+*/
+/* ----- PRINT ONLY ITINERARY ----- */
+/* ----- PRINT: show itinerary only and let it flow across pages ----- */
+@media print {
+  /* Hide everything by default */
+  body * { visibility: hidden !important; }
+
+  /* Show only the itinerary card and its children */
+  #printable-itinerary,
+  #printable-itinerary * { visibility: visible !important; }
+
+  /* Let the layout be natural flow (no absolute positioning) */
+  #printable-itinerary {
+    position: static !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Turn off the on-screen scroller so all content prints */
+  .itinerary-scroll {
+    max-height: none !important;
+    overflow: visible !important;
+    padding-right: 0 !important;
+  }
+
+  /* Optional: simplify visual chrome for print */
+  #printable-itinerary > div { /* Card wrapper */
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    background: transparent !important;
+  }
+
+  /* Keep each day together when possible */
+  .day-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin-bottom: 12px;
+  }
+
+  /* Avoid breaking inside individual slots, too */
+  .slot-card { break-inside: avoid; page-break-inside: avoid; }
+
+  /* Make the grid single-column in print (if needed) */
+  section { display: block !important; }
+
+  /* Print margins */
+  @page { size: auto; margin: 12mm; }
+
+  /* Preserve colors for icons/links */
+  body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
