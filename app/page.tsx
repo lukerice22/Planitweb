@@ -6,14 +6,14 @@ export default function PlanitLanding() {
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Planit — See it. Save it. Plan it.</title>
+        <title>Planit - See it. Save it. Plan it.</title>
         <meta
           name="description"
           content="Mark places you've been, plan the ones you'll visit, and bring your travel dreams to life with Planit."
         />
 
         {/* OpenGraph + Twitter Card meta tags */}
-        <meta property="og:title" content="Planit — See it. Save it. Plan it." />
+        <meta property="og:title" content="Planit - See it. Save it. Plan it." />
         <meta
           property="og:description"
           content="Mark places you've been, plan the ones you'll visit, and bring your travel dreams to life with Planit."
@@ -21,7 +21,7 @@ export default function PlanitLanding() {
         <meta property="og:image" content="{{LOGO_PNG}}" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Planit — See it. Save it. Plan it." />
+        <meta name="twitter:title" content="Planit - See it. Save it. Plan it." />
         <meta
           name="twitter:description"
           content="Mark places you've been, plan the ones you'll visit, and bring your travel dreams to life with Planit."
@@ -116,60 +116,49 @@ export default function PlanitLanding() {
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-light to-white py-16 lg:py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="text-center lg:text-left order-2 lg:order-1">
-                <h1 className="text-4xl lg:text-6xl font-bold text-dark mb-6 leading-tight">
-                  See it. Save it.
-                  <br />
-                  <span className="text-primary">Plan it.</span>
-                </h1>
-                <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                  Mark places you've been, plan the ones you'll visit, and bring your travel dreams to life.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
-                  <button
-                    id="hero-get-started"
-                    className="bg-primary text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                  >
-                    Get Started
-                  </button>
-                  <button
-                    className="bg-white text-primary border-2 border-primary px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                    onClick={() => document.getElementById("pins")?.scrollIntoView({ behavior: "smooth" })}
-                  >
-                    See how it works
-                  </button>
-                </div>
-                {/* Feature strip */}
-                <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 text-sm text-gray-600 justify-center lg:justify-start">
-                  <div className="flex items-center gap-2">
-                    <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    <span>Drop pins anywhere</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    <span>Notes & to-dos on each place</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    <span>Tags, colors, and categories</span>
-                  </div>
-                </div>
+            <div className="text-center">
+              <h1 className="text-5xl lg:text-7xl font-bold text-primary mb-8">Planit</h1>
+              <h2 className="text-3xl lg:text-5xl font-bold text-dark mb-6 leading-tight">
+                See it. Save it.
+                <br />
+                <span className="text-primary">Plan it.</span>
+              </h2>
+              <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-2xl mx-auto">
+                Mark places you've been, plan the ones you'll visit, and bring your travel dreams to life.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                <button
+                  id="hero-get-started"
+                  className="bg-primary text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                >
+                  Get Started
+                </button>
+                <button
+                  className="bg-white text-primary border-2 border-primary px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                  onClick={() => document.getElementById("pins")?.scrollIntoView({ behavior: "smooth" })}
+                >
+                  See how it works
+                </button>
               </div>
-              <div className="relative order-1 lg:order-2">
-                <div className="relative mx-auto w-full max-w-sm">
-                  <img
-                    src="/all-pins.jpeg"
-                    alt="Planit map showing all pins across North America with filter tabs for All, Visited, and Wishlist"
-                    className="w-full h-auto rounded-3xl shadow-2xl"
-                    loading="eager"
-                  />
+              {/* Feature strip */}
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 text-sm text-gray-600 justify-center">
+                <div className="flex items-center gap-2 justify-center">
+                  <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>Drop pins anywhere</span>
+                </div>
+                <div className="flex items-center gap-2 justify-center">
+                  <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>Notes & to-dos on each place</span>
+                </div>
+                <div className="flex items-center gap-2 justify-center">
+                  <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>Tags, colors, and categories</span>
                 </div>
               </div>
             </div>
@@ -208,37 +197,52 @@ export default function PlanitLanding() {
             </div>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="relative mx-auto w-full max-w-xs mb-6">
-                  <img
-                    src="/customized-pins.jpeg"
-                    alt="Planit map showing customized pins with different colors and shapes including flags and location markers"
-                    className="w-full h-auto rounded-2xl shadow-lg"
-                    loading="lazy"
-                  />
+                <div className="relative mx-auto w-48 mb-6">
+                  <div className="relative w-full aspect-[9/19.5] bg-gray-900 rounded-[2.5rem] p-2 shadow-2xl">
+                    <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-1/3 h-6 bg-gray-900 rounded-b-2xl"></div>
+                    <div className="w-full h-full bg-white rounded-[2rem] overflow-hidden">
+                      <img
+                        src="/customized-pins.jpeg"
+                        alt="Planit map showing customized pins with different colors and shapes including flags and location markers"
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
                 </div>
                 <h3 className="text-xl font-semibold text-dark mb-2">Customize your map</h3>
                 <p className="text-gray-600">Customize pins by color and style to match your journeys.</p>
               </div>
               <div className="text-center">
-                <div className="relative mx-auto w-full max-w-xs mb-6">
-                  <img
-                    src="/wishlist-pins.jpeg"
-                    alt="Planit map filtered to show only wishlist pins with the Wishlist tab selected"
-                    className="w-full h-auto rounded-2xl shadow-lg"
-                    loading="lazy"
-                  />
+                <div className="relative mx-auto w-48 mb-6">
+                  <div className="relative w-full aspect-[9/19.5] bg-gray-900 rounded-[2.5rem] p-2 shadow-2xl">
+                    <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-1/3 h-6 bg-gray-900 rounded-b-2xl"></div>
+                    <div className="w-full h-full bg-white rounded-[2rem] overflow-hidden">
+                      <img
+                        src="/wishlist-pins.jpeg"
+                        alt="Planit map filtered to show only wishlist pins with the Wishlist tab selected"
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
                 </div>
                 <h3 className="text-xl font-semibold text-dark mb-2">Wishlist</h3>
                 <p className="text-gray-600">Save the places you dream of visiting.</p>
               </div>
               <div className="text-center">
-                <div className="relative mx-auto w-full max-w-xs mb-6">
-                  <img
-                    src="/visited-pins.jpeg"
-                    alt="Planit map filtered to show only visited pins with the Visited tab selected"
-                    className="w-full h-auto rounded-2xl shadow-lg"
-                    loading="lazy"
-                  />
+                <div className="relative mx-auto w-48 mb-6">
+                  <div className="relative w-full aspect-[9/19.5] bg-gray-900 rounded-[2.5rem] p-2 shadow-2xl">
+                    <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-1/3 h-6 bg-gray-900 rounded-b-2xl"></div>
+                    <div className="w-full h-full bg-white rounded-[2rem] overflow-hidden">
+                      <img
+                        src="/visited-pins.jpeg"
+                        alt="Planit map filtered to show only visited pins with the Visited tab selected"
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
                 </div>
                 <h3 className="text-xl font-semibold text-dark mb-2">Visited</h3>
                 <p className="text-gray-600">Celebrate the places you've already explored.</p>
@@ -256,14 +260,14 @@ export default function PlanitLanding() {
                 <img
                   src="/pin-menu.jpeg"
                   alt="Planit pin details screen showing Paris, France with quick actions, visit date, priority settings, and appearance options"
-                  className="w-full max-w-sm mx-auto h-auto rounded-2xl shadow-lg"
+                  className="w-64 mx-auto rounded-2xl shadow-xl"
                   loading="lazy"
                 />
               </div>
               <div className="text-center lg:text-left">
                 <h3 className="text-3xl font-bold text-dark mb-4">Pin details at a glance</h3>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  Open a pin to get directions, set visit dates, and manage priority—all in one place.
+                  Open a pin to get directions, set visit dates, and manage priority all in one place.
                 </p>
               </div>
             </div>
@@ -280,7 +284,7 @@ export default function PlanitLanding() {
                 <img
                   src="/appearance.jpeg"
                   alt="Pin appearance customization showing pin shape options (Default, Flag, Thin) and color palette selection"
-                  className="w-full max-w-sm mx-auto h-auto rounded-2xl shadow-lg"
+                  className="w-64 mx-auto rounded-2xl shadow-xl"
                   loading="lazy"
                 />
               </div>
@@ -294,17 +298,15 @@ export default function PlanitLanding() {
             <div className="text-center mb-12">
               <h2 className="text-3xl lg:text-4xl font-bold text-dark mb-4">Organize by what matters</h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                From food and culture to adventure and photography—tags make it effortless to find the moments you love.
+                From food and culture to adventure and photography tags make it effortless to find the moments you love.
               </p>
             </div>
-            <div className="relative mx-auto max-w-md">
-              <img
-                src="/categories.jpeg"
-                alt="Planit categories screen showing tags like Beach, City, Food, Culture, Adventure, History, Nightlife, Photography, and more with 6 selected"
-                className="w-full h-auto rounded-2xl shadow-lg"
-                loading="lazy"
-              />
-            </div>
+            <img
+              src="/categories.jpeg"
+              alt="Planit categories screen showing tags like Beach, City, Food, Culture, Adventure, History, Nightlife, Photography, and more with 6 selected"
+              className="w-64 mx-auto rounded-2xl shadow-xl"
+              loading="lazy"
+            />
           </div>
         </section>
 
@@ -313,31 +315,35 @@ export default function PlanitLanding() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-12">
               {/* Notes Column */}
-              <div className="text-center">
-                <div className="relative mx-auto w-full max-w-sm mb-6">
+              <div className="flex flex-col items-center">
+                <div className="mb-6 flex-1 flex items-end">
                   <img
                     src="/notes.jpeg"
                     alt="Planit notes screen showing Paris travel thoughts including City of light, walking along the Seine, Montmartre, and dinner reminders"
-                    className="w-full h-auto rounded-2xl shadow-lg"
+                    className="w-64 rounded-2xl shadow-xl"
                     loading="lazy"
                   />
                 </div>
-                <h3 className="text-2xl font-bold text-dark mb-3">Keep your thoughts</h3>
-                <p className="text-lg text-gray-600">Save ideas, context, and memories right on the place.</p>
+                <div className="text-center">
+                  <h3 className="text-2xl font-bold text-dark mb-3">Keep your thoughts</h3>
+                  <p className="text-lg text-gray-600">Save ideas, context, and memories right on the place.</p>
+                </div>
               </div>
 
               {/* To-Do Column */}
-              <div className="text-center">
-                <div className="relative mx-auto w-full max-w-sm mb-6">
+              <div className="flex flex-col items-center">
+                <div className="mb-6 flex-1 flex items-end">
                   <img
                     src="/to-do.jpeg"
                     alt="Planit to-do list showing tasks for Paris including Try a baguette (completed), See the Eiffel Tower, and Notre Dame Cathedral"
-                    className="w-full h-auto rounded-2xl shadow-lg"
+                    className="w-64 rounded-2xl shadow-xl"
                     loading="lazy"
                   />
                 </div>
-                <h3 className="text-2xl font-bold text-dark mb-3">Plan your list</h3>
-                <p className="text-lg text-gray-600">Turn dreams into checkmarks with simple tasks on each pin.</p>
+                <div className="text-center">
+                  <h3 className="text-2xl font-bold text-dark mb-3">Plan your list</h3>
+                  <p className="text-lg text-gray-600">Turn dreams into checkmarks with simple tasks on each pin.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -349,12 +355,19 @@ export default function PlanitLanding() {
             {/* Row A - Search */}
             <div className="grid lg:grid-cols-2 gap-12 items-center mb-24">
               <div className="relative">
-                <img
-                  src="/searching.jpeg"
-                  alt="Planit search interface showing paris query with results including Paris, France and other Paris locations"
-                  className="w-full max-w-sm mx-auto h-auto rounded-2xl shadow-lg"
-                  loading="lazy"
-                />
+                <div className="relative mx-auto w-56">
+                  <div className="relative w-full aspect-[9/19.5] bg-gray-900 rounded-[2.5rem] p-2 shadow-2xl">
+                    <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-1/3 h-6 bg-gray-900 rounded-b-2xl"></div>
+                    <div className="w-full h-full bg-white rounded-[2rem] overflow-hidden">
+                      <img
+                        src="/searching.jpeg"
+                        alt="Planit search interface showing paris query with results including Paris, France and other Paris locations"
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
               <div className="text-center lg:text-left">
                 <h3 className="text-3xl font-bold text-dark mb-4">Find anywhere fast</h3>
@@ -367,16 +380,23 @@ export default function PlanitLanding() {
               <div className="text-center lg:text-left order-2 lg:order-1">
                 <h3 className="text-3xl font-bold text-dark mb-4">Drop a pin in one tap</h3>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  Add a pin anywhere in the world—Planit does the rest.
+                  Add a pin anywhere in the world Planit does the rest.
                 </p>
               </div>
               <div className="relative order-1 lg:order-2">
-                <img
-                  src="/add-pin.jpeg"
-                  alt="Add this pin? confirmation dialog for Paris, France on the map with Cancel and Add Pin buttons"
-                  className="w-full max-w-sm mx-auto h-auto rounded-2xl shadow-lg"
-                  loading="lazy"
-                />
+                <div className="relative mx-auto w-56">
+                  <div className="relative w-full aspect-[9/19.5] bg-gray-900 rounded-[2.5rem] p-2 shadow-2xl">
+                    <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-1/3 h-6 bg-gray-900 rounded-b-2xl"></div>
+                    <div className="w-full h-full bg-white rounded-[2rem] overflow-hidden">
+                      <img
+                        src="/add-pin.jpeg"
+                        alt="Add this pin? confirmation dialog for Paris, France on the map with Cancel and Add Pin buttons"
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -391,14 +411,12 @@ export default function PlanitLanding() {
                 Pins, trips, photos, calendar, budget tracker, achievements, and more.
               </p>
             </div>
-            <div className="relative mx-auto max-w-md">
-              <img
-                src="/min-menu-top.jpeg"
-                alt="Planit pin menu showing Paris, France with quick actions including Get Directions, Not Visited toggle, Visit Date, and Priority settings"
-                className="w-full h-auto rounded-2xl shadow-lg"
-                loading="lazy"
-              />
-            </div>
+            <img
+              src="/min-menu-top.jpeg"
+              alt="Planit pin menu showing Paris, France with quick actions including Get Directions, Not Visited toggle, Visit Date, and Priority settings"
+              className="w-64 mx-auto rounded-2xl shadow-xl"
+              loading="lazy"
+            />
           </div>
         </section>
 
@@ -412,13 +430,18 @@ export default function PlanitLanding() {
             <div className="grid md:grid-cols-2 gap-12 mb-12">
               {/* Sign Up */}
               <div className="text-center">
-                <div className="relative mx-auto w-full max-w-sm mb-6">
-                  <img
-                    src="/signup.jpeg"
-                    alt="Planit sign up modal with username, email, password fields, Sign Up button, Continue with Google, and Already have an account? Sign In link"
-                    className="w-full h-auto rounded-2xl shadow-lg"
-                    loading="lazy"
-                  />
+                <div className="relative mx-auto w-48 mb-6">
+                  <div className="relative w-full aspect-[9/19.5] bg-gray-900 rounded-[2.5rem] p-2 shadow-2xl">
+                    <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-1/3 h-6 bg-gray-900 rounded-b-2xl"></div>
+                    <div className="w-full h-full bg-white rounded-[2rem] overflow-hidden">
+                      <img
+                        src="/signup.jpeg"
+                        alt="Planit sign up modal with username, email, password fields, Sign Up button, Continue with Google, and Already have an account? Sign In link"
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
                 </div>
                 <h3 className="text-2xl font-bold text-dark mb-3">Create your account</h3>
                 <p className="text-lg text-gray-600">Start planning in seconds.</p>
@@ -426,13 +449,18 @@ export default function PlanitLanding() {
 
               {/* Sign In */}
               <div className="text-center">
-                <div className="relative mx-auto w-full max-w-sm mb-6">
-                  <img
-                    src="/signin.jpeg"
-                    alt="Planit sign in modal with email, password fields, Sign In button, Continue with Google, and Don't have an account? Sign Up link"
-                    className="w-full h-auto rounded-2xl shadow-lg"
-                    loading="lazy"
-                  />
+                <div className="relative mx-auto w-48 mb-6">
+                  <div className="relative w-full aspect-[9/19.5] bg-gray-900 rounded-[2.5rem] p-2 shadow-2xl">
+                    <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-1/3 h-6 bg-gray-900 rounded-b-2xl"></div>
+                    <div className="w-full h-full bg-white rounded-[2rem] overflow-hidden">
+                      <img
+                        src="/signin.jpeg"
+                        alt="Planit sign in modal with email, password fields, Sign In button, Continue with Google, and Don't have an account? Sign Up link"
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
                 </div>
                 <h3 className="text-2xl font-bold text-dark mb-3">Pick up where you left off</h3>
                 <p className="text-lg text-gray-600">Your pins, notes, and to-dos stay in sync.</p>
@@ -459,33 +487,22 @@ export default function PlanitLanding() {
 
         {/* Footer CTA */}
         <section className="py-16 lg:py-24 bg-gradient-to-br from-primary to-blue-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="text-center lg:text-left">
-                <h2 className="text-4xl lg:text-5xl font-bold mb-6">Your world, pinned.</h2>
-                <button
-                  id="footer-get-started"
-                  className="bg-white text-primary px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary mb-4"
-                >
-                  Get Started
-                </button>
-                <div>
-                  <button
-                    className="text-white underline hover:no-underline"
-                    onClick={() => document.getElementById("pins")?.scrollIntoView({ behavior: "smooth" })}
-                  >
-                    See features
-                  </button>
-                </div>
-              </div>
-              <div className="relative">
-                <img
-                  src="/all-pins.jpeg"
-                  alt="Planit map with pins"
-                  className="w-full max-w-sm mx-auto lg:ml-auto h-auto rounded-2xl shadow-2xl"
-                  loading="lazy"
-                />
-              </div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Planit</h2>
+            <p className="text-2xl mb-8">Your world, pinned.</p>
+            <button
+              id="footer-get-started"
+              className="bg-white text-primary px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary mb-4"
+            >
+              Get Started
+            </button>
+            <div>
+              <button
+                className="text-white underline hover:no-underline"
+                onClick={() => document.getElementById("pins")?.scrollIntoView({ behavior: "smooth" })}
+              >
+                See features
+              </button>
             </div>
           </div>
         </section>
@@ -499,7 +516,7 @@ export default function PlanitLanding() {
                 Simple tools that make travel planning actually enjoyable
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center p-6">
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -555,20 +572,6 @@ export default function PlanitLanding() {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth="2"
-                      d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
-                    ></path>
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold text-dark mb-2">Cross-device sync</h3>
-                <p className="text-gray-600">Your pins and trips follow you across devices</p>
-              </div>
-              <div className="text-center p-6">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
                       d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
                     ></path>
                   </svg>
@@ -591,11 +594,7 @@ export default function PlanitLanding() {
               <div className="text-center">
                 <div className="relative mx-auto w-48 h-80 bg-gray-900 rounded-3xl p-2 mb-6">
                   <div className="w-full h-full bg-white rounded-2xl overflow-hidden">
-                    <img
-                      src="/mobile-app-search-places-screen.png"
-                      alt="Search places"
-                      className="w-full h-full object-cover"
-                    />
+                    <img src="/searching.jpeg" alt="Search places" className="w-full h-full object-cover" />
                   </div>
                 </div>
                 <div className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 text-sm font-bold">
@@ -607,11 +606,7 @@ export default function PlanitLanding() {
               <div className="text-center">
                 <div className="relative mx-auto w-48 h-80 bg-gray-900 rounded-3xl p-2 mb-6">
                   <div className="w-full h-full bg-white rounded-2xl overflow-hidden">
-                    <img
-                      src="/mobile-app-pin-locations-screen.png"
-                      alt="Pin locations"
-                      className="w-full h-full object-cover"
-                    />
+                    <img src="/add-pin.jpeg" alt="Pin locations" className="w-full h-full object-cover" />
                   </div>
                 </div>
                 <div className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 text-sm font-bold">
@@ -623,11 +618,7 @@ export default function PlanitLanding() {
               <div className="text-center">
                 <div className="relative mx-auto w-48 h-80 bg-gray-900 rounded-3xl p-2 mb-6">
                   <div className="w-full h-full bg-white rounded-2xl overflow-hidden">
-                    <img
-                      src="/mobile-app-plan-trips-screen.png"
-                      alt="Plan trips"
-                      className="w-full h-full object-cover"
-                    />
+                    <img src="/pin-menu.jpeg" alt="Plan trips" className="w-full h-full object-cover" />
                   </div>
                 </div>
                 <div className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 text-sm font-bold">
@@ -650,63 +641,47 @@ export default function PlanitLanding() {
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
               <div
                 className="cursor-pointer hover:scale-105 transition-transform"
-                onClick={() => openLightbox("/mobile-app-home-screen-with-map.png", "Home & Map View")}
+                onClick={() => openLightbox("/customized-pins.jpeg", "Home & Map View")}
               >
                 <div className="relative mx-auto w-full max-w-48 aspect-[9/16] bg-gray-900 rounded-3xl p-2 shadow-lg">
                   <div className="w-full h-full bg-white rounded-2xl overflow-hidden">
-                    <img
-                      src="/mobile-app-home-screen-with-map.png"
-                      alt="Home & Map View"
-                      className="w-full h-full object-cover"
-                    />
+                    <img src="/customized-pins.jpeg" alt="Home & Map View" className="w-full h-full object-cover" />
                   </div>
                 </div>
                 <p className="text-center mt-4 text-sm font-medium text-gray-700">Home & Map</p>
               </div>
               <div
                 className="cursor-pointer hover:scale-105 transition-transform"
-                onClick={() => openLightbox("/mobile-app-pins-list-screen.png", "Pins List & Detail")}
+                onClick={() => openLightbox("/all-pins.jpeg", "Pins List & Detail")}
               >
                 <div className="relative mx-auto w-full max-w-48 aspect-[9/16] bg-gray-900 rounded-3xl p-2 shadow-lg">
                   <div className="w-full h-full bg-white rounded-2xl overflow-hidden">
-                    <img
-                      src="/mobile-app-pins-list-screen.png"
-                      alt="Pins List & Detail"
-                      className="w-full h-full object-cover"
-                    />
+                    <img src="/all-pins.jpeg" alt="Pins List & Detail" className="w-full h-full object-cover" />
                   </div>
                 </div>
                 <p className="text-center mt-4 text-sm font-medium text-gray-700">Pins & Details</p>
               </div>
               <div
                 className="cursor-pointer hover:scale-105 transition-transform"
-                onClick={() => openLightbox("/mobile-app-trip-planning-screen.png", "Plan & Add Pin Flow")}
+                onClick={() => openLightbox("/pin-menu.jpeg", "Plan & Add Pin Flow")}
               >
                 <div className="relative mx-auto w-full max-w-48 aspect-[9/16] bg-gray-900 rounded-3xl p-2 shadow-lg">
                   <div className="w-full h-full bg-white rounded-2xl overflow-hidden">
-                    <img
-                      src="/mobile-app-trip-planning-screen.png"
-                      alt="Plan & Add Pin Flow"
-                      className="w-full h-full object-cover"
-                    />
+                    <img src="/pin-menu.jpeg" alt="Plan & Add Pin Flow" className="w-full h-full object-cover" />
                   </div>
                 </div>
                 <p className="text-center mt-4 text-sm font-medium text-gray-700">Planning</p>
               </div>
               <div
                 className="cursor-pointer hover:scale-105 transition-transform"
-                onClick={() => openLightbox("/mobile-app-photo-journal-screen.png", "Photo Journal")}
+                onClick={() => openLightbox("/profile.jpeg", "Profile")}
               >
                 <div className="relative mx-auto w-full max-w-48 aspect-[9/16] bg-gray-900 rounded-3xl p-2 shadow-lg">
                   <div className="w-full h-full bg-white rounded-2xl overflow-hidden">
-                    <img
-                      src="/mobile-app-photo-journal-screen.png"
-                      alt="Photo Journal"
-                      className="w-full h-full object-cover"
-                    />
+                    <img src="/profile.jpeg" alt="Profile" className="w-full h-full object-cover" />
                   </div>
                 </div>
-                <p className="text-center mt-4 text-sm font-medium text-gray-700">Photo Journal</p>
+                <p className="text-center mt-4 text-sm font-medium text-gray-700">Profile</p>
               </div>
             </div>
           </div>
@@ -857,7 +832,6 @@ export default function PlanitLanding() {
                 const appLink = getAppStoreLink();
                 document.getElementById('nav-get-app').onclick = () => window.open(appLink, '_blank');
                 document.getElementById('hero-get-started').onclick = () => window.open(appLink, '_blank');
-                document.getElementById('qr-code').onclick = () => window.open(appLink, '_blank');
                 document.getElementById('signup-cta').onclick = () => window.open(appLink, '_blank');
                 document.getElementById('signin-cta').onclick = () => window.open(appLink, '_blank');
                 document.getElementById('footer-get-started').onclick = () => window.open(appLink, '_blank');
@@ -890,9 +864,11 @@ export default function PlanitLanding() {
             // Initialize slider
             document.addEventListener('DOMContentLoaded', function() {
                 const slider = document.getElementById('screenshot-slider');
-                slider.addEventListener('mouseenter', stopSlider);
-                slider.addEventListener('mouseleave', startSlider);
-                startSlider();
+                if (slider) { // Ensure slider element exists before adding listeners
+                    slider.addEventListener('mouseenter', stopSlider);
+                    slider.addEventListener('mouseleave', startSlider);
+                    startSlider();
+                }
             });
 
             // Lightbox functionality
